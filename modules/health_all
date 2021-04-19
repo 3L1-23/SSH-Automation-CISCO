@@ -1,0 +1,52 @@
+show clock
+show version
+show running-config
+show stacks
+show interfaces
+show controllers
+show process cpu
+show process cpu history
+show file systems
+show bootflash: all
+show disk0: all
+dir const_nvram:
+show sip1-disk0: all
+show redundancy
+show redundancy history
+show controllers t1
+show controllers e1
+show ipc queue
+show ipc rpc
+show ipc port
+show ipc port open
+show scp status
+show ibc
+show hw-module all fpd
+show hw-module all sensors
+show hw-module subslot all oir
+show ip nbar version
+show crypto key mypubkey rsa
+show inventory
+show region
+remote command switch show nvlog
+remote command switch show ibc
+show fabric errors
+show fabric channel-counters
+show eobc
+remote command switch show eobc
+show tech platform earl
+show mls statistics
+show logging
+show module
+show mls asic
+show power
+show environment
+show catalyst6000 all
+show diagnostic events
+show interfaces switchport brief
+show interfaces trunk
+show vlan
+show mac-address-table
+show spanning-tree active
+show spanning-tree summary
+show heartbeat

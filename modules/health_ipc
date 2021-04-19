@@ -1,0 +1,5 @@
+terminal length 0
+show ipc queue
+show ipc rpc
+show ipc port
+show ipc port open

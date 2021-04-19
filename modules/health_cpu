@@ -1,0 +1,3 @@
+terminal length 0
+show process cpu
+show process cpu history

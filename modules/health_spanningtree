@@ -1,0 +1,3 @@
+terminal length 0
+show spanning-tree active
+show spanning-tree summary
