@@ -22,14 +22,6 @@ parser.add_argument("-m", "--module", metavar="cmd", help='Run selected module f
 parser.add_argument("-l", "--list-modules", action="store_false", help='List the available modules') 
 args = parser.parse_args()
 ###
-
-# filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
-# myFile = open("hosts/" + filename).read().splitlines()            #Print # hosts in file
-
-# def myFile(test):
-#    filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
-#    return open("hosts/" + filename).read().splitlines()
-   
    
 #Count hosts in the hosts_file
 def count_hosts(hosts):
