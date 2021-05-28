@@ -4,7 +4,7 @@
 ### Can be used for any device that supports ssh but purpose built for Cisco switches/routers
 
 #### Getting Started
-1. You need python3, pip3, and exscript 
+1. You need python3, pip3, and exscript. If on Windows view "Using WSL 2 on Windows" 
     - pip3 - https://www.makeuseof.com/tag/install-pip-for-python/ 
         - sudo apt install python3-pip
     - exscript -  https://github.com/knipknap/exscript.git  
