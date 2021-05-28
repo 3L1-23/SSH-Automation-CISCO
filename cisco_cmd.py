@@ -26,15 +26,15 @@ args = parser.parse_args()
 # filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
 # myFile = open("hosts/" + filename).read().splitlines()            #Print # hosts in file
 
-def myFile(test):
-   filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
-   return open("hosts/" + filename).read().splitlines()
+# def myFile(test):
+#    filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
+#    return open("hosts/" + filename).read().splitlines()
    
    
 #Count hosts in the hosts_file
 def count_hosts(hosts):
    counter = 0
-   for i in myFile:
+   for i in hosts:
       if i:
          counter += 1
    return counter
@@ -90,6 +90,11 @@ def built_in_cmds():
   for i in shorthand:
      print(i + " = " + built_in_commands.my_dict.get(i))
 
+###Gets file with targets
+def zebra():
+   filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
+   return open("hosts/" + filename).read().splitlines()            #Print # hosts in file
+   
 #command line arguements - gets the -c -o, etc options
 def main(argv):
    command = ''
@@ -109,6 +114,7 @@ def main(argv):
          built_in_cmds()
          sys.exit()
       elif opt in ("-m", "--module"):
+         myFile = zebra()
          print("\n""COMMANDS:\n%s" % multcmd_cmds(arg))
          print("\nNUMBER OF HOSTS YOU ARE TARGETING: ",count_hosts(myFile))
          print("\nDevice Responses = /tmp/cisco_cmd_logs/")
@@ -124,6 +130,7 @@ def main(argv):
       else:
          assert False, "unhandled option"
       final_cmd = command + option
+   myFile = zebra()
    print("\nYOU ARE ABOUT TO RUN THE COMMAND: ",final_cmd)
    print("\nNUMBER OF HOSTS YOU ARE TARGETING: ",count_hosts(myFile))
    print("\nCANCEL NOW IF THIS IS THE WRONG COMMAND/HOST NUMBER \n")
