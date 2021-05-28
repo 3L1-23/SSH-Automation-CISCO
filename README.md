@@ -50,7 +50,7 @@
 > ./cisco_cmd.py -l, --list-modules
 
 #### Examples:
-> ./cisco_cmd.py -c shmac -o 'abcd'
+> ./cisco_cmd.py -c shmac -o abcd
 > 
 > ./cisco_cmd.py -c shmactable
 >
