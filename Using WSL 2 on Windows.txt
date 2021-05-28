@@ -17,4 +17,4 @@ sudo apt install python3-pip -y
 sudo apt install git -y 
 git clone https://github.com/knipknap/exscript.git
 cd exscript
-pip3 install .
+pip3 install -r requirements.txt .
