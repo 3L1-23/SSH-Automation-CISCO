@@ -5,8 +5,8 @@
 
 #### Getting Started
 1. You need python3, pip3, and exscript 
-    - pip3 - https://www.makeuseof.com/tag/install-pip-for-python/
-    - exscript -  https://github.com/knipknap/exscript.git
+    - pip3 - https://www.makeuseof.com/tag/install-pip-for-python/ <sudo apt install python3-pip>
+    - exscript -  https://github.com/knipknap/exscript.git  <pip3 install -r requirements.txt .>
 2. Change 'hosts/hosts_file' to include the hosts to connect to
     - One host per line, no other formatting required
 3. To run the file
