@@ -6,7 +6,8 @@ from Exscript import Account
 import sys, getopt, time, datetime, getpass, importlib, os, built_in_commands, argparse
 
 date = datetime.datetime.now()
-myFile = open("hosts/hosts_file.txt").read().splitlines()            #Print # hosts in file
+filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
+myFile = open("hosts/" + filename).read().splitlines()            #Print # hosts in file
 
 ###Help Menu
 #The nargs='?', is used to not have to enter data after or the action='store_false'. Can be used to adjust what appears on screen when not requiring <-l all> <-l> alone will work
@@ -15,6 +16,7 @@ myFile = open("hosts/hosts_file.txt").read().splitlines()            #Print # ho
 single_quotes = " ' ' " 
 parser = argparse.ArgumentParser(description='  View README for detailed help/examples \n\n  " " or %s REQUIRED when using spaces \n\n  -o NOT required to run a built-in command' % single_quotes, 
 formatter_class=argparse.RawTextHelpFormatter)
+# parser.add_argument("hosts", help='Name of file with targeted')
 parser.add_argument("-c", "--cmd", help='Run a built-in command from array')
 parser.add_argument("-b", "--list-builtin", action="store_false", help='List the available built-in commands from an array')
 parser.add_argument("-o", "--option", help='Optional user input filter for the builtin commands')
@@ -24,7 +26,7 @@ parser.add_argument("-l", "--list-modules", action="store_false", help='List the
 args = parser.parse_args()
 ###
 
-#Count hosts in the hosts_file.txt
+#Count hosts in the hosts_file
 def count_hosts(hosts):
    counter = 0
    for i in myFile:
@@ -117,7 +119,7 @@ def main(argv):
       else:
          assert False, "unhandled option"
       final_cmd = command + option
-   print("YOU ARE ABOUT TO RUN THE COMMAND: ",final_cmd)
+   print("\nYOU ARE ABOUT TO RUN THE COMMAND: ",final_cmd)
    print("\nNUMBER OF HOSTS YOU ARE TARGETING: ",count_hosts(myFile))
    print("\nCANCEL NOW IF THIS IS THE WRONG COMMAND/HOST NUMBER \n")
    print("Responses are appended to /tmp/cisco_cmd_logs/results.txt")
