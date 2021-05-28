@@ -50,7 +50,9 @@
 > ./cisco_cmd.py -l, --list-modules
 
 #### Examples:
-> ./cisco_cmd.py -c shmactable -o '| in abcd'
+> ./cisco_cmd.py -c shmac -o 'abcd'
+> 
+> ./cisco_cmd.py -c shmactable
 >
 > ./cisco_cmd.py -c shintstatus -o '| in Gi1/0/1'
 >
