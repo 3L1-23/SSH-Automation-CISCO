@@ -7,7 +7,7 @@
 1. You need python3, pip3, and exscript 
     - pip3 - https://www.makeuseof.com/tag/install-pip-for-python/
     - exscript -  https://github.com/knipknap/exscript.git
-2. Change 'hosts_file.txt' to include the hosts to connect to
+2. Change 'hosts/hosts_file' to include the hosts to connect to
     - One host per line, no other formatting required
 3. To run the file
     - python3 cisco_cmd.py or ./cisco_cmd.py (Syntax below)
