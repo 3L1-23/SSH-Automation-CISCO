@@ -6,9 +6,6 @@ from Exscript import Account
 import sys, getopt, time, datetime, getpass, importlib, os, built_in_commands, argparse
 
 date = datetime.datetime.now()
-filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
-myFile = open("hosts/" + filename).read().splitlines()            #Print # hosts in file
-
 ###Help Menu
 #The nargs='?', is used to not have to enter data after or the action='store_false'. Can be used to adjust what appears on screen when not requiring <-l all> <-l> alone will work
 #metavar='<custom_cmd>'
@@ -25,6 +22,9 @@ parser.add_argument("-m", "--module", help='Run selected module from the availab
 parser.add_argument("-l", "--list-modules", action="store_false", help='List the available modules') 
 args = parser.parse_args()
 ###
+
+filename = input("File in hosts directory with targets [Default: hosts_file]: ") or "hosts_file"
+myFile = open("hosts/" + filename).read().splitlines()            #Print # hosts in file
 
 #Count hosts in the hosts_file
 def count_hosts(hosts):
