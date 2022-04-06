@@ -11,8 +11,7 @@ date = datetime.datetime.now()
 #metavar='<custom_cmd>'
 #https://docs.python.org/3/howto/argparse.html
 single_quotes = " ' ' " 
-parser = argparse.ArgumentParser(description='  View README for detailed help/examples \n\n  " " or %s REQUIRED when using spaces \n\n  -o NOT required to run a built-in command' % single_quotes, 
-formatter_class=argparse.RawTextHelpFormatter)
+parser = argparse.ArgumentParser(description='  View README for detailed help/examples \n\n  " " or %s REQUIRED when using spaces \n\n  -o NOT required to run a built-in command' % single_quotes,formatter_class=argparse.RawTextHelpFormatter)
 # parser.add_argument("hosts", help='Name of file with targeted')
 parser.add_argument("-c", "--cmd", metavar="cmd", help='Run a built-in command from array')
 parser.add_argument("-b", "--list-builtin", action="store_false", help='List the available built-in commands from an array')
