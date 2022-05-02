@@ -84,3 +84,22 @@ Add templates for better interactions - https://exscript.readthedocs.io/en/lates
 Add modules & built-in tasks
 
 Printing results to another file on the fly
+
+## Fortiap Commands
+https://praveenkumar4blog.wordpress.com/2017/01/18/how-to-check-why-fortiap-got-offline-from-fortigate/
+
+reboot
+get system performance
+cfg -s
+fap-get-status
+cw_diag uptime
+cw_diag sys-performance
+iwconfig
+diag_debug_crashlog read
+cw_diag -c wtp-cfg
+cw_diag -c radio-cfg
+cw_diag -c vap-cfg
+cw_diag kernel-panic
+dmesg
+rcfg
+klog
